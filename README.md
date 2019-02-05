@@ -1,2 +1,2 @@
 # one-pager
-i'm lazy u know
+Not quite ready yet, but it's very easy to use!
