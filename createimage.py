@@ -24,6 +24,9 @@ else:
     text = textwrap(text, 950)
     lines = len(text)
 
+    print(f'File: {sys.argv[1]}')
+    print(f'Lines: {lines}')
+
     eta = ETA(lines/10)
     for line in text:
         canvas.text((margin, offset), line, font=font, fill="#000000")
