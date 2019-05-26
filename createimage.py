@@ -1,6 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
-import sys
 from eta import ETA
+import sys
 
 width = 4960
 height = 7016

@@ -1,6 +1,6 @@
 # one-pager
 
-Not quite ready yet, but it's very easy to use.
+Puts whole book on one page!
 
 ## Why?
 
@@ -8,4 +8,4 @@ I'm lazy
 
 ## Requirements
 
-Python3, Pillow
+Python3, Pillow, eta
