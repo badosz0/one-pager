@@ -1,14 +1,18 @@
 from PIL import Image, ImageDraw, ImageFont
-import textwrap, sys
+import sys
+from eta import ETA
 
 width = 4960
 height = 7016
 fontIn = 'fonts/Roboto-Light.ttf'
 
+def textwrap(text, width):
+    return [text[i:i+width] for i in range(0, len(text), width)]
+
 if len(sys.argv) < 2 or sys.argv[1][-4:] != '.txt':
     print('Please specify .txt file.')
 else:
-    text = open(sys.argv[1],"r", encoding="utf-8").read().replace("\n"," ")
+    text = open(sys.argv[1],"r", encoding="utf-8").read().replace("\n"," ").replace("\t"," ")
 
     blank = Image.new('RGBA', (width, height), color=(255, 255, 255))
 
@@ -20,16 +24,14 @@ else:
 
     curline = 0
 
-    lines = len(textwrap.wrap(text, width=950))
+    text = textwrap(text, 900)
+    lines = len(text)
 
-    for line in textwrap.wrap(text, width=950):
-
-        cur = cur + 1
-
+    eta = ETA(lines)
+    for line in text:
         canvas.text((margin, offset), line, font=font, fill="#000000")
-
         offset += font.getsize(line)[1]
+        eta.print_status()
 
-        print(round(cur/lines*100,2),"%")
-
-    blank.save(f'{sys.argv[1]}.png')
+    blank.save(f'{sys.argv[1][:-4]}.png')
+    eta.done()
