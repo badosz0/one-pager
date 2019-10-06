@@ -4,4 +4,4 @@ Puts whole book on one page!
 
 ## Requirements
 
-Python3, Pillow, eta
+Python3, Pillow, ETA
