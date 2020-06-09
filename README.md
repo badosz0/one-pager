@@ -6,7 +6,7 @@
 [![Github Forks](https://img.shields.io/github/forks/badosz0/one-pager.svg)](https://github.com/badosz0/one-pager/network)
 [![Github Stars](https://img.shields.io/github/stars/badosz0/one-pager.svg)](https://github.com/badosz0/one-pager/stargazers)
 
-Puts whole book on one page!
+Puts whole book on one page
 
 ## Requirements
 
